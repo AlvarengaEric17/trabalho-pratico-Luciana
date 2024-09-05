@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Acessível</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/6697966.png" type="image/x-icon">
+</head>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+
+    <nav>
+
+        <ul>
+            <img src="img/logo.png" alt="Logo da empresa Viagem Conosco" width="60px" height="60px" class="logo">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#pacotes">Pacotes</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+
+        <section class="buttons">
+            <button class="btn btn-dark" id="increase-font"><img src="img/redimensionar-fonte.png"
+                    alt="Botão para aumentar fonte" width="20px" height="20px"></button>
+            <button class="btn btn-dark" id="decrease-font"><img src="img/redimensionar-fonte (1).png"
+                    alt="Botão para diminuir fonte" width="20px" height="20px"></button>
+
+            <button class="btn btn-light" id="lightButton"><img src="img/modo-claro.png"
+                    alt="Botão para alterar modo claro" width="20px" height="20px"></button>
+            <button class="btn btn-dark" id="darkButton"><img src="img/escuro.png" alt="Botão para alterar modo escuro"
+                    width="20px" height="20px"></button>
+
+        </section>
+
+    </nav>
+    <main>
+
+        <div class="container">
+            <h1>Bem vindo(a)</h1>
+            <h2>Conheça melhor os cãezinhos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/shihtzu.jpg" width="300px" height="300px" alt="imagem do Shih Tzu">
+                    <div class="card-content">
+                        <h2 class="card-title">Sihi Tzu</h2>
+                        <p class="card-description">Cachorro da raça Sihi Tzu</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/pinscher.jpg" width="300px" height="300px" alt="imagem do pinscher">
+                    <div class="card-content">
+                        <h2 class="card-title">Pinscher</h2>
+                        <p class="card-description">Cachorro da raça Pinscher</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/chow.jpg" width="300px" height="300px" alt="Imagem do Chow Chow">
+                    <div class=" card-content">
+                        <h2 class="card-title">Chow Chow</h2>
+                        <p class="card-description">Cachorro da raça CHow Chow</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/pastorAlemao.jpg" width="300px" height="300px" alt="Pastor Alemão">
+                    <div class="card-content">
+                        <h2 class="card-title">Pastor Alemão</h2>
+                        <p class="card-description">Cachorro da raça Pastor Alemão</p>
+                    </div>
+                </div>
+
+                <!-- Adicione mais cards aqui, se necessário -->
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <h4>&copy;2024 - Eric Alvarenga</h4>
+    </footer>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        document.addEventListener('DOMContentLoaded', function () {
+            const increaseButton = document.getElementById('increase-font');
+            const decreaseButton = document.getElementById('decrease-font');
+            const content = document.body;
+
+            let fontSize = 16; // Tamanho de fonte inicial em pixels
+
+            increaseButton.addEventListener('click', function () {
+                fontSize += 2;
+                content.style.fontSize = fontSize + 'px';
+            });
+
+            decreaseButton.addEventListener('click', function () {
+                fontSize -= 2;
+                content.style.fontSize = fontSize + 'px';
+            });
+        });
+
+        document.getElementById('lightButton').addEventListener('click', () => { document.body.classList.remove('dark-mode'); }); document.getElementById('darkButton').addEventListener('click', () => { document.body.classList.add('dark-mode'); });
+    </script>
+</body>
+
+</html>
